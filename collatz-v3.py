@@ -16,7 +16,7 @@ def collatz(start_num, chain_dict):
     else:
         nextCol = 3 * start_num  + 1
 
-    #passes next number to test into this function and checks returned dictionary for the chain length of next number on chain and adds 1 to it
+    #passes next number to test into this function; checks returned dictionary for the chain length of next number on chain; adds 1 to that value and stores it as the chain length for the current number
     newVal = collatz(nextCol, chain_dict)
     chain_dict[start_num] = newVal[nextCol] + 1
     return chain_dict
